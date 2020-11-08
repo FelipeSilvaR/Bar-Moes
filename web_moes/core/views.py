@@ -8,5 +8,5 @@ def home(request):
         productos.append(prod)
     return render(request, "index.html", {'titulo': 'Nuestros productos son lo mejor', 'productos':productos}) 
 
-def menu(request):
-    return HttpResponse("<h1>Esto es menu</h1>")
+def contacto(request):
+    return render(request, "contacto.html")
