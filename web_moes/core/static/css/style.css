@@ -1,0 +1,107 @@
+#encabezado-tabla{
+    background: red;   
+}
+
+.navbar-nav > a {
+    font-size: 1em;
+    left: 50%; 
+    color: orange;  
+    white-space: nowrap;
+    
+}
+
+.navbar-nav > a:hover {
+    color: orange;
+    text-shadow: 0 0 10px #FFFFFF,
+                 0 0 20px #FFFFFF,
+                 0 0 40px #FFFFFF,
+                 0 0 80px#FFFFFF;
+}
+
+#titulo-header > p {
+    font-family: Chiller;
+    font-size: 2em;
+    color: yellow;
+    text-align: center;    
+    
+        
+}
+
+#titulo-header > p:hover {
+    color: yellow;
+    text-shadow: 0 0 10px #FFFFFF,
+                 0 0 20px #FFFFFF,
+                 0 0 40px #FFFFFF,
+                 0 0 80px #FFFFFF;
+                 
+}
+
+@media (max-width: 1000px){
+    .titulo-header > p{
+        font-family: Chiller;
+        color: yellow;
+        text-align: center;
+    } 
+
+    .img-logo{
+        height: 30rem;
+        width: 25rem;
+    }
+}
+
+#redes-nav{
+    text-align: right;
+    margin-right: 50px;   
+}
+
+.img-card{    
+    text-align: center;
+    height: 100%;
+    width: 100%;    
+}
+
+.col{
+    text-align: center;
+    margin: 0.5rem;
+}
+
+
+
+
+
+.card-menu {
+    background-color: transparent;
+    width: 350px;
+    height: 250px;
+    perspective: 1000px;
+    padding: 10px;
+}
+
+.inner-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: all 0.8s;
+}
+
+.card-menu:hover .inner-card{
+    transform: rotateY(180deg);
+}
+
+.front-card, .back-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    backface-visibility: hidden;
+}
+
+.back-card {
+    background-color: #3a8fff;
+    color: #fff;
+    padding: 20px;
+    transform: rotateY(180deg);
+}
