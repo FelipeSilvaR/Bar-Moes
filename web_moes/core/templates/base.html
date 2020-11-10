@@ -22,10 +22,10 @@
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link ml-4 active" aria-current="page" href="{% url 'home' %}">Inicio</a>
-                        <a class="nav-link ml-4" href="menu.html">Menu</a>
-                        <a class="nav-link ml-4" href="{% url 'contacto' %}">Contacto</a>
+                    <div class="navbar-nav">                    
+                        <a class="nav-link ml-4 {% if request.path == '/' %} active {% endif %}" aria-current="page" href="{% url 'home' %}">Inicio</a>
+                        <a class="nav-link ml-4 {% if request.path == '/productos/' %} active {% endif %}" href="{% url 'productos' %}">Menu</a>
+                        <a class="nav-link ml-4 {% if request.path == '/contacto/' %} active {% endif %}" href="{% url 'contacto' %}">Contacto</a>
                     </div>
                 </div>
             </div>

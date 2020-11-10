@@ -105,3 +105,27 @@
     padding: 20px;
     transform: rotateY(180deg);
 }
+
+.icon-oferta{
+    font-size: 1.2em;
+    color: red;
+}
+
+.precio-oferta{
+    font-weight: bold; 
+}
+
+.precio-anterior{
+    color: gray;
+    text-decoration: line-through;
+}
+
+.text-titulo{
+    color: black;
+    font-weight: bold; 
+}
+
+.img-producto{
+    height: 170px;
+    width: auto;
+}

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+    {% load humanize %}
+    <main class="container-fluid mt-2">
+        <div class="row">
+            <div class="col-sm-12 bg-dark bg-gradient text-white text-center">
+                <h1>Nuestros productos son los mejores</h1>
+            </div>
+        </div>
+        <div class="row mt-5 pb-5 mb-5">
+            {% for p in productos %}
+            <div class="col-sm-12 col-md-6 col-lg-3 pb-5">
+                <div class="card">
+                    <div class="card-header {% if p.estaEnOferta %} bg-warning {% else %} bg-dark {% endif %} text-white">
+                    {% if p.estaEnOferta %}
+                        <i class="icon-oferta fas fa-certificate"></i>
+                        <i class="icon-oferta fas fa-certificate"></i>
+                        <i class="icon-oferta fas fa-certificate"></i>
+                        <span class="text-titulo">{{p.titulo}}</span>
+                        <i class="icon-oferta fas fa-certificate"></i>
+                        <i class="icon-oferta fas fa-certificate"></i>
+                        <i class="icon-oferta fas fa-certificate"></i>
+                    {% else %}
+                        <span>{{p.titulo}}</span>
+                    {% endif %}
+                    </div>
+                    <div class="card-body text-center">
+                        <img src="{{p.imagen}}" class="img-producto">
+                    </div>
+                    <div class="card-footer">
+                    {% if p.estaEnOferta %}
+                        <span class="precio-oferta">$ {{p.precio | intcomma}}.-</span><span class="precio-anterior">      $ {{p.precio | intcomma}}.-</span>
+                    {% else %}
+                        <span>$ {{p.precio | intcomma}}.-</span>
+                    {% endif %}
+                    </div>
+                </div>
+            </div> 
+            {% endfor %}
+        </div>
+    </main>
+{% endblock %}
