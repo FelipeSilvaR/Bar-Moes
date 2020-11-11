@@ -66,46 +66,6 @@
 }
 
 
-
-
-
-.card-menu {
-    background-color: transparent;
-    width: 350px;
-    height: 250px;
-    perspective: 1000px;
-    padding: 10px;
-}
-
-.inner-card {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transform-style: preserve-3d;
-    transition: all 0.8s;
-}
-
-.card-menu:hover .inner-card{
-    transform: rotateY(180deg);
-}
-
-.front-card, .back-card {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    border-radius: 5px;
-    backface-visibility: hidden;
-}
-
-.back-card {
-    background-color: #3a8fff;
-    color: #fff;
-    padding: 20px;
-    transform: rotateY(180deg);
-}
-
 .icon-oferta{
     font-size: 1.2em;
     color: red;
@@ -113,6 +73,7 @@
 
 .precio-oferta{
     font-weight: bold; 
+    
 }
 
 .precio-anterior{
@@ -125,7 +86,16 @@
     font-weight: bold; 
 }
 
+.text-titulo-pagina{
+    font-size: 2.5em;
+}
+
 .img-producto{
     height: 170px;
     width: auto;
+}
+
+.desc-pagina{
+    font-size: 2em;
+    font-weight: bold; 
 }

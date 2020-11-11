@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+    {% load humanize %}
+    <main class="container-fluid mt-2">
+        <div class="row mt-5">
+            <div class="col-lg-6 col-md-8 col-sm-12 mx-auto">            
+                <div class="row {% if producto.estaEnOferta %} bg-warning {% else %} bg-dark text-white {% endif %}">
+                    <div class="col-sm-12 text-center">
+                        {% if producto.estaEnOferta %}
+                        <i class="icon-oferta fas fa-certificate"></i>
+                        <i class="icon-oferta fas fa-certificate"></i>
+                        <i class="icon-oferta fas fa-certificate"></i>
+                        <span class="text-titulo-pagina">{{producto.titulo}}</span>
+                        <i class="icon-oferta fas fa-certificate"></i>
+                        <i class="icon-oferta fas fa-certificate"></i>
+                        <i class="icon-oferta fas fa-certificate"></i>
+                    {% else %}
+                        <span class="text-titulo-pagina">{{producto.titulo}}</span>
+                    {% endif %}
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-sm-12">
+                        <img src="{{producto.imagen.url}}" class="img-fluid">    
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <p class="desc-pagina col-sm-12">{{producto.descripcion | safe}}</p>
+                </div>
+                <div class="row mt-2">
+                    {% if producto.estaEnOferta %}
+                        <div class="col-sm-12 bg-warning">
+                    {% else %}
+                        <div class="col-sm-12">
+                    {% endif %}
+                        <p>$ {{producto.precio | intcomma}}.-</p>
+                        </div>
+                </div>
+            </div>            
+        </div>
+    </main>
+
+{% endblock %}

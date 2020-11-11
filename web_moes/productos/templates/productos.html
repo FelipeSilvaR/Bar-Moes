@@ -25,14 +25,15 @@
                     {% endif %}
                     </div>
                     <div class="card-body text-center">
-                        <img src="{{p.imagen}}" class="img-producto">
+                        <img src="{{p.imagen.url}}" class="img-producto">
                     </div>
                     <div class="card-footer">
                     {% if p.estaEnOferta %}
-                        <span class="precio-oferta">$ {{p.precio | intcomma}}.-</span><span class="precio-anterior">      $ {{p.precio | intcomma}}.-</span>
+                        <span class="precio-oferta pr-3">$ {{p.precio | intcomma}}.-</span><span class="precio-anterior">      $ {{p.precio | intcomma}}.-</span>
                     {% else %}
                         <span>$ {{p.precio | intcomma}}.-</span>
                     {% endif %}
+                        <a href="{% url 'producto' p.id %}">Ver</a>
                     </div>
                 </div>
             </div> 
