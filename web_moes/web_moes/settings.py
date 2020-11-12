@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'core',
     'productos',
     'ckeditor',
+    'contacto',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +126,9 @@ STATIC_URL = '/static/'
 import os
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER = "gamesmoes.duoc@gmail.com"
+EMAIL_PORT = '587'
+EMAIL_HOST_PASSWORD = "felipe.85"
+EMAIL_USE_TLS = True 

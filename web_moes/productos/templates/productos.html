@@ -30,10 +30,11 @@
                     <div class="card-footer">
                     {% if p.estaEnOferta %}
                         <span class="precio-oferta pr-3">$ {{p.precio | intcomma}}.-</span><span class="precio-anterior">      $ {{p.precio | intcomma}}.-</span>
+                        <a class="btn btn-warning btn-block" href="{% url 'producto' p.id %}">Ver</a>
                     {% else %}
-                        <span>$ {{p.precio | intcomma}}.-</span>
-                    {% endif %}
-                        <a href="{% url 'producto' p.id %}">Ver</a>
+                        <span class="precio-oferta">$ {{p.precio | intcomma}}.-</span>
+                        <a class="btn btn-dark btn-block" href="{% url 'producto' p.id %}">Ver</a>
+                    {% endif %}                        
                     </div>
                 </div>
             </div> 

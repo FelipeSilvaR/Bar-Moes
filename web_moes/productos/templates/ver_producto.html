@@ -5,16 +5,18 @@
         <div class="row mt-5">
             <div class="col-lg-6 col-md-8 col-sm-12 mx-auto">            
                 <div class="row {% if producto.estaEnOferta %} bg-warning {% else %} bg-dark text-white {% endif %}">
-                    <div class="col-sm-12 text-center">
+                    <div class="col-sm-12">
                         {% if producto.estaEnOferta %}
+                        <a href="{% url 'productos' %}" style="color:black;" class="ml-3 mr-5"><i class="fas fa-undo h2 "></i></a>
                         <i class="icon-oferta fas fa-certificate"></i>
                         <i class="icon-oferta fas fa-certificate"></i>
-                        <i class="icon-oferta fas fa-certificate"></i>
-                        <span class="text-titulo-pagina">{{producto.titulo}}</span>
+                        <i class="icon-oferta fas fa-certificate"></i>                        
+                        <span class="h1 text-titulo-pagina">{{producto.titulo}}</span>
                         <i class="icon-oferta fas fa-certificate"></i>
                         <i class="icon-oferta fas fa-certificate"></i>
                         <i class="icon-oferta fas fa-certificate"></i>
                     {% else %}
+                        <a href="{% url 'productos' %}" class="ml-3 mr-5 text-white"><i class="fas fa-undo h2 "></i></a>
                         <span class="text-titulo-pagina">{{producto.titulo}}</span>
                     {% endif %}
                     </div>
@@ -25,15 +27,15 @@
                     </div>
                 </div>
                 <div class="row mt-5">
-                    <p class="desc-pagina col-sm-12">{{producto.descripcion | safe}}</p>
+                    <span class="h5 desc-pagina col-sm-12">{{producto.descripcion | safe}}</span>
                 </div>
-                <div class="row mt-2">
+                <div class="row mt-2 pb-5">
                     {% if producto.estaEnOferta %}
-                        <div class="col-sm-12 bg-warning">
+                        <div class="col-sm-12 bg-warning pb-2">
                     {% else %}
                         <div class="col-sm-12">
                     {% endif %}
-                        <p>$ {{producto.precio | intcomma}}.-</p>
+                        <span class="h4">$ {{producto.precio | intcomma}}.-</span>
                         </div>
                 </div>
             </div>            

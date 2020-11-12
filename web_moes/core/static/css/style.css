@@ -88,6 +88,7 @@
 
 .text-titulo-pagina{
     font-size: 2.5em;
+    
 }
 
 .img-producto{
@@ -95,7 +96,4 @@
     width: auto;
 }
 
-.desc-pagina{
-    font-size: 2em;
-    font-weight: bold; 
-}
+
