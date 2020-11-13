@@ -20,7 +20,7 @@ def contacto(request):
             try:
                 email.send()
                 #TODO:mejorar esto para que mande el ok
-                return redirect(reverse('contacto'))
+                return redirect(reverse('contacto')+"?ok")
             except Exception as e:
-                return redirect(reverse('contacto'))
+                return redirect(reverse('contacto')+"?error")
     return render(request, "contacto.html", {'form':formulario})

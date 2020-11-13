@@ -15,7 +15,7 @@
                     {% for p in productos %}
                         <div class="carousel-item {% if forloop.counter == 1 %} active {% endif %}">
                             <img src="{{p.imagen.url}}" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="desc-carrusel carousel-caption d-none d-md-block">
                                 <h5>{{p.titulo}}</h5>
                                 <p>{{p.descripcion | safe}}</p>
                             </div>
