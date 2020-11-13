@@ -13,3 +13,6 @@ class Producto(models.Model):
     #Representacion en formato texto del objeto
     def __str__(self):
         return self.titulo
+
+    def precioDiferente(self):
+        return self.precio-600

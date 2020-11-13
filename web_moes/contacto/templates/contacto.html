@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
-    <main class="container-fluid mt-5">
+    <main class="container-fluid mt-5 mb-5">
         <div class="row">
-            <div class="col-sm-12 bg-dark bg-gradient text-white text-center">
-                <h2>Contactenos para solicitar información adicional</h2>
+            <div class="col-sm-4 bg-dark bg-gradient text-white text-center mx-auto">
+                <h2>Ingrese su pedido</h2>
             </div>
         </div>
         {% if 'ok' in request.GET %}
@@ -33,6 +33,29 @@
                     {{form.correo}}
                     {{form.correo.errors}}
                 </div>
+                <div class="form-group">                    
+                    {{form.telefono}}
+                    {{form.telefono.errors}}
+                </div>
+                <div class="form-group mb-3">
+                            <label for="menu-select">Menu</label>
+                            <select id="menu-select" class="form-select">
+                                <option value="Completo Italiano 22cm">Completo Italiano 22cm</option>
+                                <option value="Churrasco Italiano 15cm">Churrasco Italiano 15cm</option>
+                                <option value="Ave Italiana 15cm">Ave Italiana 15cm</option>
+                                <option value="chorrillana">Chorrillana</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="bebida-select">Bebidas</label>
+                            <select id="bebida-select" class="form-select">
+                                <option value="CocaCola">CocaCola</option>
+                                <option value="Fanta">Fanta</option>
+                                <option value="Sprite">Sprite</option>
+                                <option value="Cerveza 500cc.">Cerveza Duff 350CC</option>
+                                <option value="llamarada">Llamarada Moe</option>
+                            </select>
+                        </div>
                 <div class="form-group">                    
                     {{form.mensaje}}
                     {{form.mensaje.errors}}

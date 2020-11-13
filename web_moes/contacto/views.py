@@ -11,9 +11,10 @@ def contacto(request):
         if formulario.is_valid():
             nombre = request.POST.get("nombre",'')
             correo = request.POST.get('correo','')
+            telefono = request.POST.get('telefono','')
             mensaje = request.POST.get('mensaje','')
             email = EmailMessage("Le han contactado",
-            "{} {}: Dijo {}".format(nombre,correo,mensaje),
+            "{}, correo: {}, telefono: {}: Dijo {}".format(nombre,correo,telefono,mensaje),
             "gamesmoes.duoc@gmail.com",
             ['gamesmoes.duoc@gmail.com'],
             reply_to=[correo])

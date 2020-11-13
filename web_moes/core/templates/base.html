@@ -25,7 +25,7 @@
                     <div class="navbar-nav">                    
                         <a class="nav-link ml-4 {% if request.path == '/' %} active {% endif %}" aria-current="page" href="{% url 'home' %}">Inicio</a>
                         <a class="nav-link ml-4 {% if request.path == '/productos/' %} active {% endif %}" href="{% url 'productos' %}">Menu</a>
-                        <a class="nav-link ml-4 {% if request.path == '/contacto/' %} active {% endif %}" href="{% url 'contacto' %}">Contacto</a>
+                        <a class="nav-link ml-4 {% if request.path == '/contacto/' %} active {% endif %}" href="{% url 'contacto' %}">Pedido</a>
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@
     </header>
     {% block content %}{% endblock %}
 
-    <footer class="bg-dark text-white mt-3 site-footer">
+    <footer class="bg-dark text-white site-footer">
         <div class="row pt-2">
             <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
                 <h6>Ante cualquier duda contactar a <a class="text-white" href="">gamesmoes.duoc@gmail.com</a></h6>

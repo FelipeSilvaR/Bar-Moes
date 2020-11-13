@@ -2,14 +2,18 @@
 {% block content %}
 <main class="container-fluid">
     <section class="col-lg-6 col-md-6 col-sm-12 mx-auto">
-            <img class="pl-5 ml-5 img-logo justify-content-center mx-auto" src="/media/productos/logo_moe.jpg" alt="">                        
+        <img class="pl-5 ml-5 img-logo justify-content-center mx-auto" src="/media/productos/logo_moe.jpg" alt="">
     </section>
     <section class="col-lg-8 col-md-6 col-sm-12 mx-auto mt-5 text-center">
-        <h4>Moe's nace de su tradición como especialista en sándwich, rescatando toda la pasión de sus "maestros sangucheros" forjados bajo el alero de la cadena por más de 25 años. Sus maestros, con sus recetas únicas, con ingredientes frescos, el cariño en la cocina y su pasión por la calidad y el servicio, elaboran día a día en todos los restaurantes el verdadero sándwich tradicional, el sándwich preferido por todos los chilenos.</h4>
+        <h4>Moe's nace de su tradición como especialista en sándwich, rescatando toda la pasión de sus "maestros
+            sangucheros" forjados bajo el alero de la cadena por más de 25 años. Sus maestros, con sus recetas únicas,
+            con ingredientes frescos, el cariño en la cocina y su pasión por la calidad y el servicio, elaboran día a
+            día en todos los restaurantes el verdadero sándwich tradicional, el sándwich preferido por todos los
+            chilenos.</h4>
     </section>
     <section class="container-fluid">
         <div class="row mt-5">
-            <div class="col-lg-8 col-md-6 col-sm-12 mx-auto">
+            <div class="col-lg-8 col-md-6 col-sm-12 mx-auto">                
                 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                     {% for p in productos %}
@@ -17,7 +21,7 @@
                             <img src="{{p.imagen.url}}" class="d-block w-100" alt="...">
                             <div class="desc-carrusel carousel-caption d-none d-md-block">
                                 <h5>{{p.titulo}}</h5>
-                                <p>{{p.descripcion | safe}}</p>
+                                
                             </div>
                         </div>
                     {% endfor %}

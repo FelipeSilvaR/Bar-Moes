@@ -29,7 +29,7 @@
                     </div>
                     <div class="card-footer">
                     {% if p.estaEnOferta %}
-                        <span class="precio-oferta pr-3">$ {{p.precio | intcomma}}.-</span><span class="precio-anterior">      $ {{p.precio | intcomma}}.-</span>
+                        <span class="precio-oferta pr-3">$ {{p.precioDiferente | intcomma}}.-</span><span class="precio-anterior">      $ {{p.precio | intcomma}}.-</span>
                         <a class="btn btn-warning btn-block" href="{% url 'producto' p.id %}">Ver</a>
                     {% else %}
                         <span class="precio-oferta">$ {{p.precio | intcomma}}.-</span>
